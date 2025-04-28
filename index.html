@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rock Paper Scissors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<header>
+<div class="logo">
+    ROCK <br> PAPER <br> SCISSORS
+</div>
+<div class="score-box">
+<h2>SCORE</h2>
+<p id="score">0</p>
+</div>
+</header>
+ 
+<main class="main" id="game">
+<div class="choice-container">
+<button class="choice paper" onclick="playerPick('paper')">
+<img src="/rock-paper-scissors-master/images/icon-paper.svg" alt="Paper">
+</button>
+ 
+    <button class="choice scissors" onclick="playerPick('scissors')">
+<img src="/rock-paper-scissors-master/images/icon-scissors.svg" alt="Scissors">
+</button>
+ 
+    <button class="choice rock" onclick="playerPick('rock')">
+<img src="/rock-paper-scissors-master/images/icon-rock.svg" alt="Rock">
+</button>
+</div>
+ 
+  <button class="rules-button" onclick="openRules()">RULES</button>
+</main>
+ 
+<main class="result" id="result" style="display: none;">
+<div class="picked">
+<h2>YOU PICKED</h2>
+<div id="player-choice" class="big-choice"></div>
+</div>
+ 
+  <div class="result-text">
+<h1 id="result-message"></h1>
+<button onclick="playAgain()" class="play-again">PLAY AGAIN</button>
+</div>
+ 
+  <div class="picked">
+<h2>THE HOUSE PICKED</h2>
+<div id="computer-choice" class="big-choice"></div>
+</div>
+</main>
+ 
+<div class="rules-popup" id="rules-popup" style="display: none;">
+<div class="rules-box">
+<div class="rules-header">
+<h2>RULES</h2>
+<button class="close-button" onclick="closeRules()">✖</button>
+</div>
+<img src="/rock-paper-scissors-master/images/image-rules.svg" alt="Rules Diagram" class="rules-image">
+</div>
+</div>
+ 
+<script src="script.js"></script>
+ 
+</body>
+</html>
